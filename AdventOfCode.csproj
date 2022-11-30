@@ -17,6 +17,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="AdventOfCode.Services\AdventOfCode.Services.csproj" />
     <ProjectReference Include="AdventOfCode.Solutions\AdventOfCode.Solutions.csproj" />
   </ItemGroup>

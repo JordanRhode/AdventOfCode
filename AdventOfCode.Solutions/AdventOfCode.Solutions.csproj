@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Year2021\Day01\input" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Year2021\Day01\input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Services\AdventOfCode.Services.csproj" />
   </ItemGroup>
 
