@@ -6,6 +6,7 @@ class Solution : SolutionBase
 
     protected override string SolvePartOne()
     {
+        // Alternative Solution: return Input.Split("\n\n").Select(i => i.SplitByNewline().Sum(int.Parse)).Max().ToString();
         int maxCalories = 0;
         int currentCalories = 0;
         var lines = Input.SplitByNewline(splitOptions: StringSplitOptions.None);
@@ -26,6 +27,7 @@ class Solution : SolutionBase
 
     protected override string SolvePartTwo()
     {
+        // Alternative Solution: return Input.Split("\n\n").Select(i => i.SplitByNewline().Sum(int.Parse)).OrderByDescending(i => i).Take(3).Sum().ToString();
         int currentCalories = 0;
         var topThreeCalories = new HashSet<int>();
         var lines = Input.SplitByNewline(splitOptions: StringSplitOptions.None);
