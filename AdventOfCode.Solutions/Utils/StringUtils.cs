@@ -11,15 +11,13 @@ public static class StringUtils
         return new string(arr);
     }
 
-    public static string[] SplitByNewline(this string str, bool shouldTrim = false) => str
-        .Split(NewLineDelimiter, StringSplitOptions.None)
-        .Where(s => !string.IsNullOrWhiteSpace(s))
+    public static string[] SplitByNewline(this string str, bool shouldTrim = false, StringSplitOptions splitOptions = StringSplitOptions.RemoveEmptyEntries) => str
+        .Split(NewLineDelimiter, splitOptions)
         .Select(s => shouldTrim ? s.Trim() : s)
         .ToArray();
 
-    public static string[] SplitByParagraph(this string str, bool shouldTrim = false) => str
-        .Split(ParagraphDelimiter, StringSplitOptions.None)
-        .Where(s => !string.IsNullOrWhiteSpace(s))
+    public static string[] SplitByParagraph(this string str, bool shouldTrim = false, StringSplitOptions splitOptions = StringSplitOptions.RemoveEmptyEntries) => str
+        .Split(ParagraphDelimiter, splitOptions)
         .Select(s => shouldTrim ? s.Trim() : s)
         .ToArray();
 
